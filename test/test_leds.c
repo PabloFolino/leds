@@ -12,7 +12,7 @@
 //======================= Constantes locales =====================================
 
 //======================== Variables locales ======================================
-bool ledsVirtuales;
+uint16_t ledsVirtuales;
 
 // ======================= Gestión de Errores =====================================
 bool error_informado=false;
