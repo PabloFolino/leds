@@ -10,22 +10,20 @@
 #include "leds.h"
 
 //======================= Constantes locales =====================================
-#define FALSE 0
-#define TRUE 1
 
 //======================== Variables locales ======================================
-uint16_t ledsVirtuales;
+bool ledsVirtuales;
 
 // ======================= Gestión de Errores =====================================
-int error_informado=FALSE;
+bool error_informado=false;
 
 void RegistrarError(void) {
-    error_informado=TRUE;
+    error_informado=true;
 }
 
 //========================== Funciones del software de testeo =====================
 void setUp(void) {                      // Se llama cada vez que comienza una prueba
-   error_informado=FALSE;
+   error_informado=false;
    Leds_Create(&ledsVirtuales, RegistrarError);
 }
 
