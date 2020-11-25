@@ -79,6 +79,5 @@ void test_consultar_led_ON(void) {
 }
 
 void test_consultar_led_OFF(void) {
-    Leds_Off(16);
     TEST_ASSERT_FALSE(Leds_Test(16));
 }

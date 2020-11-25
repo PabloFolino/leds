@@ -37,11 +37,5 @@ void Leds_Off(uint8_t led){
 }
 
 bool Leds_Test(uint8_t led ){
-    uint16_t temp;
-   
-    temp=0;
-    temp= *direccion & LedToMask(led);
-    if(temp==false)
-            return false;
-    return true;        
+    return 0 != (*direccion & LedToMask(led));
 }
